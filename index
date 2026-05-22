@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:js='false' b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta charset='utf-8'/>
+  
+  <!-- Optimasi Viewport & Mode Layar Penuh PWA -->
+  <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover' name='viewport'/>
+  <meta content='yes' name='mobile-web-app-capable'/>
+  <meta content='yes' name='apple-mobile-web-app-capable'/>
+  <meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'/>
+  <meta content='Web App Saya' name='apple-mobile-web-app-title'/>
+  
+  <title><data:blog.pageTitle/></title>
+  
+  <b:skin><![CDATA[
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100vw !important;
+      height: 100vh; /* Fallback browser lama */
+      height: 100dvh !important; /* Resolusi dinamis nav bar mobile */
+      overflow: hidden !important;
+      background-color: #ffffff;
+    }
+    #gas-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw !important;
+      height: 100vh !important; /* Fallback */
+      height: 100dvh !important; /* Resolusi dinamis iframe */
+      border: none !important;
+      display: block;
+      z-index: 9999;
+    }
+    #navbar-iframe, .BloggerRequired {
+      display: none !important;
+      visibility: hidden !important;
+      height: 0 !important;
+      width: 0 !important;
+    }
+  ]]></b:skin>
+</head>
+<body>
+
+  <!-- Iframe GAS dengan izin fullscreen mutlak -->
+  <iframe allow='camera; microphone; geolocation; fullscreen' allowfullscreen='true' id='gas-iframe' mozallowfullscreen='true' src='https://script.google.com/macros/s/AKfycbzYlR0Ygd5Ftfl0teWxTkuyr62FOibgudW1X8HqN6SJnVLNbCgNsRUkRwpe1dxHMlY8/exec' webkitallowfullscreen='true'/>
+
+  <!-- Wrapper wajib Blogger dengan Dummy Widget -->
+  <div class='BloggerRequired'>
+    <b:section class='main' id='main' showaddelement='no'>
+      <b:widget id='HTML1' locked='true' title='' type='HTML' version='1'>
+        <b:includable id='main'/>
+      </b:widget>
+    </b:section>
+  </div>
+
+</body>
+</html>
